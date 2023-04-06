@@ -37,7 +37,11 @@ const SignInForm: React.FC<SignInFormProps> = ({
   }, []);
 
   return (
-    <form onSubmit={handleSubmit(onFormSubmit)} className='signInForm'>
+    <form
+      onSubmit={handleSubmit(onFormSubmit)}
+      className='signInForm'
+      data-testid='account-sign-in'
+    >
       <FormInput
         control={control}
         name='email'

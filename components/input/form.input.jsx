@@ -23,6 +23,7 @@ export default function FormInput({ control, name, register, ...rest }) {
             height: '50px',
           }}
           {...register(name)}
+          data-testid={`account-${name}`}
         />
       )}
     />

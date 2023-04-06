@@ -4,7 +4,7 @@ import { useCallback, useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import { useRouter } from 'next/dist/client/router';
+import { useRouter } from 'next/router';
 
 import ForgotPwdForm from '../components/auth/forgot.pwd.form';
 import SignInForm from '../components/auth/sign.in.form';
@@ -40,7 +40,7 @@ export default function Auth() {
       console.log('I am here!');
       router.replace('/calendar');
     }
-  }, user);
+  }, [user]);
 
   const handleGoogleLogin = () =>
     auth
