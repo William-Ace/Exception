@@ -56,7 +56,7 @@ export default function Auth() {
 
   const signOut = () => firebase.auth().signOut();
 
-  const signInWithEmailAndPassword = (email: any, password: any) =>
+  const signInWithEmailAndPassword = (email, password) =>
     auth
       .signInWithEmailAndPassword(email, password)
       .then(user => setUser(user))

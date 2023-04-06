@@ -21,12 +21,10 @@ const initialValues = {
   password: '',
 };
 
-interface SignUpFormProps {
-  createUserWithEmailAndPassword: (a: any) => void;
-}
+type typeCreateUserWithEmailAndPassword = (a: {}) => void;
 
-const SignUpForm: React.FC<SignUpFormProps> = ({
-  createUserWithEmailAndPassword,
+const SignUpForm = ({
+  createUserWithEmailAndPassword: typeCreateUserWithEmailAndPassword,
 }) => {
   const { handleSubmit, control, register, getValues } = useForm({
     resolver: yupResolver(formSchema),

@@ -31,7 +31,7 @@ const auth = firebase.auth();
 
 export default function Auth() {
   const handleAuthMode = useCallback((mode: string) => setAuthMode(mode), []);
-  const [authMode, setAuthMode] = useState<string | null>('signin');
+  const [authMode, setAuthMode] = useState('signin');
   const router = useRouter();
   const { user, setUser } = useContext(AuthContext);
 
@@ -56,7 +56,7 @@ export default function Auth() {
 
   const signOut = () => firebase.auth().signOut();
 
-  const signInWithEmailAndPassword = (email: any, password: any) =>
+  const signInWithEmailAndPassword = (email, password) =>
     auth
       .signInWithEmailAndPassword(email, password)
       .then(user => setUser(user))

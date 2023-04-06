@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 type authContextType = {
   user: Object;
-  setUser: (a: any) => void;
+  setUser: () => void;
 };
 
 const authContextDefaultValues: authContextType = {
