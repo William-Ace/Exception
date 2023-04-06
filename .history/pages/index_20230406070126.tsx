@@ -40,7 +40,7 @@ export default function Auth() {
       console.log('I am here!');
       router.replace('/calendar');
     }
-  }, [user, router]);
+  }, [user]);
 
   const handleGoogleLogin = () =>
     auth

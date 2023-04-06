@@ -29,7 +29,7 @@ const SignUpForm = ({ createUserWithEmailAndPassword }) => {
 
   const onFormSubmit = useCallback(
     () => createUserWithEmailAndPassword(getValues()),
-    [getValues, createUserWithEmailAndPassword]
+    []
   );
 
   return (

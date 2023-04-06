@@ -1,11 +1,11 @@
 import ForgotPwdForm from './forgot.pwd.form';
+import PrivateRoute from './private.route';
 import SignInForm from './sign.in.form';
 import SignUpForm from './sign.up.form';
 
-const auth = {
+export default {
   ForgotPwdForm,
+  PrivateRoute,
   SignInForm,
   SignUpForm,
 };
-
-export default auth;
